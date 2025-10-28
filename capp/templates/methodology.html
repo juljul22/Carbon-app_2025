@@ -1,190 +1,76 @@
 {% extends "layout.html" %}
+
+{% block title %}Methodology{% endblock %}
+
 {% block content %}
-  
-<!-- Header -->
-<section class="section_header_methodology">
-    <div class="container">
-  
-      <div class="header">
-        <div class="box"> 
-          <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
-          <p style="text-align:left;">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
-          </p>
-          <div class="container_buttons_links_header">
-            <div class="btn">
-                <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Paper</a>
-            </div>
-            <div class="btn">
-                <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Carbon App</a>
-            </div>
-          </div>  
-        </div>
-        <div class="box">
-          <img 
-            src="{{url_for('static', filename='icons/methodology1.svg')}}"
-            width="325" 
-            height="325"
-            alt=""/>
-        </div>
-      </div>
-      
-    </div>
-</section> 
 
-<!-- Methodology -->
-<section class="section_body_methodology">
-    <div class="container">
-  
-        <div class="methodology" style="display:block;">
-            <h1 style="text-align:center;"> Methodology</h1>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            </p>      
-        </div>
+<div class="text-overlay">
+<div class="methodology-container">
+    <h1> Our methodology </h1>
+    <p>Hey, it's me again, Mr.Eco!</p>
+    <br>
+    <p>
+I'm here to help you measure the carbon emissions produced by the various ways you get around whether you drive a car, 
+take a train, fly across the globe, or travel by boat. By analyzing your transportation habits across different modes of 
+travel, I'll provide you with personalized insights into how each journey contributes to your overall carbon footprint. 
+Armed with this knowledge, you can make informed decisions about greener alternatives, discover which transportation 
+methods are most eco-friendly, and track your progress as you work toward reducing your environmental impact. </p>
+<br>
+<p>
+And remember, understanding the environmental impact of your daily commute and travel choices is the first step toward
+a more sustainable lifestyle.</p>
+<br>
+<p>
+    Start your journey towards a more sustainable travel today, let's investigate together!
+</div>
+</p>
+</div>
+</div>
 
-        <div class="methodology" style="display:block;">
-            <h1 style="text-align:center;"> Our numbers and formulas</h1>
-            <p>
-              We are going to studty some \(\LaTeX ~ formulas\) that could be useful for our project:
-            </p> 
-        </div>
+<div class="formula-box">
+<p><strong>Carbon Emissions Calculation Formula:</strong></p>
+<p>Carbon Emissions (kg CO₂) = Distance Traveled (km) × Emission Factor (g CO₂/km) / amout of passengers</p>
 
-        <!--Enumerated list (table with two columns)-->
-        <div class="methodology"> 
-            <div class="box_table2" style="height:200px;">
-                <ol start="1">
-                    <li>
-                        <h4>Mathematical expressions 1</h4>
-                        <p class="text-left">
-                            Mathematical expressions \( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \) inside text.
-                            <br>
-                            Mathematical expressions outside text:
-                            \[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table2" style="height:200px;">
-                <ol start="2">
-                    <li>
-                        <h4>Mathematical expressions 2</h4>
-                        <p class="text-left">
-                            Mathematical expressions \( x^2 + y^2 = z^2 \) inside text.
-                            <br>
-                            Mathematical expressions outside text:
-                            \[ x^2 + y^2 = z^2 \]
-                        </p>
-                    </li>
-                </ol>
-            </div>  
-        </div>
+</div>
+    <div class="transport-grid">
+  <div class="transport-card">
+    <i class="fa-solid fa-car-side"> Car</i>
+    <p>The carbon emissions from driving depend on your vehicle's fuel type. Diesel cars produce
+         <strong>229 g CO2/km</strong>, while petrol cars emit <strong>198 g CO2/km</strong>. Electric vehicles are the greenest option, producing just <strong>59 g CO2/km</strong> 
+   roughly one-third the emissions of petrol and one-quarter of diesel vehicles.
+  </div>
 
-        <!--Enumerated list (table with two columns)-->
-        <div class="methodology"> 
-            <div class="box_table2" style="height:425px;">
-                <ol start="3">
-                    <li>
-                        <h4>Sums</h4>
-                        <p class="text-left">
-                            Sum \(\sum_{n=1}^{\infty} 2^{-n} = 1\) inside text.
-                            <br>
-                            Sum outside text:
-                            \[ \sum_{n=1}^{\infty} 2^{-n} = 1 \]
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Products</h4>
-                        <p class="text-left">
-                            Product \(\prod_{i=a}^{b} f(i)\) inside text.
-                            <br>
-                            Product outside text:
-                            \[ \prod_{i=a}^{b} f(i) \]
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table2" style="height:425px;">
-                <ol start="5">
-                    <li>
-                        <h4>Limits</h4>
-                        <p class="text-left">
-                            Limit \(\lim_{x\to\infty} f(x)\) inside text.
-                            <br>
-                            Limit outside text:
-                            \[ \lim_{x\to\infty} f(x) \]
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Integrals</h4>
-                        <p class="text-left">
-                            Integral \(\int_{a}^{b} x^2 \,dx\) inside text.
-                            <br>
-                            Integral outside text:
-                            \[ \int_{a}^{b} x^2 \,dx \]
-                        </p>
-                    </li>
-                </ol>
-            </div>  
-        </div>
+  <div class="transport-card">
+    <i class="fa-solid fa-plane"> Airplane</i>
+    <p> Economy class produces <strong>127 g CO2/pkm</strong> while business class generates <strong>284 g CO2/pkm</strong>
+         Economy is significantly more eco-friendly since emissions are shared among more passengers, 
+  whereas business class has fewer passengers per plane, resulting in a higher carbon footprint per person.</p>
+  </div>
 
-        
+  <div class="transport-card">
+   <i class="fa-solid fa-train-tram"> Train</i>
+    <p>Train travel is one of the most eco-friendly transportation options. Electric trains produce just
+      <strong>7 g CO2/pkm</strong> while diesel trains emit <strong>91 g CO2/pkm</strong>. Electric trains are significantly
+      cleaner and represent the greenest way to travel long distances.
+  </div>
 
-        <!--Enumerated list (table with one column)-->
-        <div class="methodology">              
-            <div class="box_table1">
-                      
-            </div>
-            <div class="box_table1">
-                <ol>
-                    <li>
-                        <h4>Buses</h4>
-                        <p class="text-left">
-                            The <strong>carbon dioxide emissions</strong> produced by buses are organized in <strong>four categories</strong>. The carbon dioxide emission produced by diesel buses is 0.10231 grammes per kilometer. The carbon dioxide emission produced by CNG buses is 0.08 grammes per kilometer. The carbon dioxide emission produced by petrol buses is 0.10231 grammes per kilometer. If the buses do not use fossil fuel, their dioxide carbon emissions are 0 grammes per kilometer.
-                            <br>
-                            To work out buses dioxide emissions, we use the next formula:
-                            \[CO^2 = {Cte + \sqrt{f(km)} \over t}.\]
-                            <br>
-                            Where:
-                            <ul style="text-align:left;">
-                                <li>
-                                    \(Cte\) is a constant, since the engine requires some fuel to initialize.
-                                </li>
-                                <li>
-                                    \(km\) are the kilometers.
-                                </li>
-                                <li>
-                                    \(f\) is a coefficient depending on the type of fuel (see paragraph above).
-                                </li>
-                                <li>
-                                    \(t\) is the temperature, since in winter the engines require less fuel.
-                                </li>
-                            </ul>
-                            
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Cars</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Planes</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                </ol>                        
-            </div>
-            <div class="box_table1">
-                      
-            </div>  
-        </div>
+  <div class="transport-card">
+   <i class="fa-solid fa-ship"> Ferry</i>
+    <p>Boat emissions vary significantly based on capacity. Passenger boats produce <strong>186 g CO2/pkm</strong>, making them a moderate option for water travel. 
+  Cars transported without passengers emit <strong>377 g CO2/pkm</strong> more than double the emissions of passenger boats.</p>
+  </div>
 
-        
-      
-    </div>
-</section>
+  <div class="transport-card">
+    <i class="fa-solid fa-bus"> Bus</i>
+    <p>Diesel buses emit <strong>30g of CO₂ per kilometer</strong> consider greener options to keep your travel more 
+        sustainable!</p>
+  </div>
 
-{% endblock content %}
+  <div class="transport-card">
+    <i class="fa-solid fa-bicycle"> Bicycle</i>
+    <p>This mode of transport produces <strong>no CO₂</strong> during use the perfect choice for 100% sustainable travel.</p>
+  </div>
+</div>
+
+           
+{% endblock %}
