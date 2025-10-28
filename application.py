@@ -1,11 +1,15 @@
-from flask import Flask
-from capp.home.routes import home
-from capp.methodology.routes import methodology
-from capp.carbon_app.routes import carbon_app
+from flask import render_template, Blueprint
 
-application = Flask(__name__)
+carbon_app=Blueprint('carbon_app',__name__)
 
-# Blueprints registrieren
-application.register_blueprint(home)
-application.register_blueprint(methodology)
-application.register_blueprint(carbon_app)
+@carbon_app.route('/carbon_app')
+def carbon_app_home():
+    return render_template('carbon_app/carbon_app.html', title='carbon_app')
+
+@carbon_app.route('/carbon_app/new_entry')
+def new_entry():
+    return render_template('carbon_app/new_entry.html', title='new_entry')
+
+@carbon_app.route('/carbon_app/your_data')
+def your_data():
+    return render_template('carbon_app/your_data.html', title='your_data')
