@@ -10,5 +10,9 @@ def home():
 def methodology():
     return render_template('methodology.html')
 
+@application.route('/aboutus')
+def aboutus():
+    return render_template ('aboutus.html')
+
 if __name__=='__main__':
     application.run(debug=True)  
