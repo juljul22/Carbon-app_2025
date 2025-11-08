@@ -1,0 +1,325 @@
+/* Colors */
+/* Rainy theme 5 -Green Digitalization Course and Students Apps-:
+Navbar (background): #8bbbd9
+Navbar (a hover): #466fa6
+Navbar (logo): #568c63
+Navbar (a menu): #2a4359
+Footer (background): #8bbbd9
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS utilities */
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.hero{
+  background-image: url('https://wallpapercave.com/wp/wp4491150.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px 20px;
+  text-align:center;
+  color: #11461e;
+}
+
+body {
+    background-color: #11461e;
+        margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 1320px;
+}
+ul { 
+  list-style: none;
+  font-size: 400;
+}
+a {
+  color: #7cac7d;
+  text-decoration: none;
+}
+h1, h2 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Navbar  */
+
+.section_navbar {
+  background-color:#11461e;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  height: 70px;
+  align-items: center;
+  padding: 0 60px;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+   gap: 8px;
+  font-size: 2rem;    
+  font-weight: 700;
+  color:  rgb(240, 222, 193);
+}
+
+.logo .text-logo-o i {
+  position: relative;
+  top: 2.25px;
+  margin-left: -7px;
+  font-size: 1.8rem;
+}
+
+.navbar nav {
+  flex:1;
+}
+
+.navbar nav ul {
+  display: flex;
+  justify-content: space-evenly;   
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+   }
+
+.navbar nav a {
+  color:  rgb(240, 222, 193);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar nav a:hover {
+  border-bottom: 2px rgb(161, 73, 6) solid;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+/* Footer  */
+
+.section_footer{
+  background-color:hsla(135, 61%, 17%, 0.32);
+   padding: 10px 0;
+  color: rgb(240, 222, 193); 
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  align-items: center;
+  padding: 0 0px;
+  color: rgb(240, 222, 193);
+}
+
+/* METHODOLOGY - TRANSPORT CARDS */
+
+.methodology-container {
+  padding: 40px 80px; 
+}
+
+.transport-grid {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  gap: 40px;             
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.transport-card {
+  width: 100%;
+  background-color: #181f19;
+  border-radius: 16px;
+  padding: 40px;
+  color: #181f19;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.transport-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.2);
+}
+
+.transport-card h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #181f19;
+}
+
+.transport-card p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgb(240, 222, 193);
+}
+
+/* formula Box */
+.formula-box {
+  width: 80%;
+  background-color: #181f19;
+  border-radius: 40px;
+  padding: 30px;
+  color: rgb(240, 222, 193);
+  box-shadow: 0 6px 12px rgba(227, 212, 212, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 50px auto;
+}
+/* Methodology - Paragraph Overlay */
+
+.text-overlay {
+  background-color: #181f19;
+    background-color: rgb(240, 222, 193);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 20px auto; 
+    color: rgba(24, 31, 25, 0.8);
+    text-align: center;
+}
+
+/* Home Page Styles */
+
+.text-overlay {
+  background-color: #181f19;
+    background-color: rgba(24, 31, 25, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 20px auto; 
+    color: rgb(240, 222, 193);
+    text-align: center;
+}
+
+/* Team Section */
+.team-section {
+    padding: 60px 20px;
+    text-align: center;
+    color: rgb(240, 222, 193); 
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.team-card {
+    background-color: rgba(24, 31, 25, 0.8); 
+    padding: 20px;
+    border-radius: 16px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.3);
+}
+
+.team-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: rgb(240, 222, 193);
+}
+
+.btn_developers {
+ background-color: #0e76a8; 
+  color: rgb(240, 222, 193);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn_developers:hover {
+    transform: scale(1.05) translateY(-8px);
+    background-color: rgb(240, 222, 193);
+    color: #0e76a8; 
+    font-weight: 700;
+  }
+
+
+@media (max-width: 768px) {
+  .hero {
+    background-position:center;
+    font-size: 16px;
+  }
+  
+  body {
+    background-position: center;
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .navbar nav ul{
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .transport-grid, .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transport-card, .team-card, .formula-box {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
