@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}Methodology{% endblock %}
+
+{% block content %}
+
+<div class="text-overlay">
+<div class="methodology-container">
+    <h1> Our methodology </h1>
+    <p>Hey, it's me again, Mr.Eco!</p>
+    <br>
+    <p>
+I'm here to help you measure the carbon emissions produced by the various ways you get around whether you drive a car, 
+take a train, fly across the globe, or travel by boat. By analyzing your transportation habits across different modes of 
+travel, I'll provide you with personalized insights into how each journey contributes to your overall carbon footprint. 
+Armed with this knowledge, you can make informed decisions about greener alternatives, discover which transportation 
+methods are most eco-friendly, and track your progress as you work toward reducing your environmental impact. </p>
+<br>
+<p>
+And remember, understanding the environmental impact of your daily commute and travel choices is the first step toward
+a more sustainable lifestyle.</p>
+<br>
+<p>
+    Start your journey towards a more sustainable travel today, let's investigate together!
+</div>
+</p>
+</div>
+</div>
+
+<div class="formula-box">
+<p><strong>Carbon Emissions Calculation Formula:</strong></p>
+<p>Carbon Emissions (kg CO₂) = Distance Traveled (km) × Emission Factor (g CO₂/km) / amout of passengers</p>
+
+</div>
+    <div class="transport-grid">
+  <div class="transport-card">
+    <i class="fa-solid fa-car-side"> Car</i>
+    <p>The carbon emissions from driving depend on your vehicle's fuel type. Diesel cars produce
+         <strong>229 g CO2/km</strong>, while petrol cars emit <strong>198 g CO2/km</strong>. Electric vehicles are the greenest option, producing just <strong>59 g CO2/km</strong> 
+   roughly one-third the emissions of petrol and one-quarter of diesel vehicles.
+  </div>
+
+  <div class="transport-card">
+    <i class="fa-solid fa-plane"> Airplane</i>
+    <p> Economy class produces <strong>127 g CO2/pkm</strong> while business class generates <strong>284 g CO2/pkm</strong>
+         Economy is significantly more eco-friendly since emissions are shared among more passengers, 
+  whereas business class has fewer passengers per plane, resulting in a higher carbon footprint per person.</p>
+  </div>
+
+  <div class="transport-card">
+   <i class="fa-solid fa-train-tram"> Train</i>
+    <p>Train travel is one of the most eco-friendly transportation options. Electric trains produce just
+      <strong>7 g CO2/pkm</strong> while diesel trains emit <strong>91 g CO2/pkm</strong>. Electric trains are significantly
+      cleaner and represent the greenest way to travel long distances.
+  </div>
+
+  <div class="transport-card">
+   <i class="fa-solid fa-ship"> Ferry</i>
+    <p>Boat emissions vary significantly based on capacity. Passenger boats produce <strong>186 g CO2/pkm</strong>, making them a moderate option for water travel. 
+  Cars transported without passengers emit <strong>377 g CO2/pkm</strong> more than double the emissions of passenger boats.</p>
+  </div>
+
+  <div class="transport-card">
+    <i class="fa-solid fa-bus"> Bus</i>
+    <p>Diesel buses emit <strong>30g of CO₂ per kilometer</strong> consider greener options to keep your travel more 
+        sustainable!</p>
+  </div>
+
+  <div class="transport-card">
+    <i class="fa-solid fa-bicycle"> Bicycle</i>
+    <p>This mode of transport produces <strong>no CO₂</strong> during use the perfect choice for 100% sustainable travel.</p>
+  </div>
+</div>
+
+           
+{% endblock %}
+
+
