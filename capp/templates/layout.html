@@ -27,11 +27,11 @@
 
     <section class="section_navbar">
   <div class="navbar">
-  <div class="logo">
-    <span class="text-logo"><i class="fa-solid fa-user-secret"></i></span>
-    <span class="logo-text">MR. EC</span>
-    <span class="text-logo-o"><i class="fa-solid fa-magnifying-glass"></i></span>
-</div>
+    <div class="logo">
+      <span class="text-logo"><i class="fa-solid fa-user-secret"></i></span>
+      <span class="logo-text">MR. EC</span>
+      <span class="text-logo-o"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </div>
 
     <nav>
       <ul>
@@ -40,8 +40,15 @@
         <li><a href="{{ url_for('aboutus.aboutus_home') }}">About Us</a></li>
       </ul>
     </nav>
+
+    <!-- 🔹 Ajout des boutons Login / Register -->
+    <div class="auth-buttons">
+      <a href="{{ url_for('home.login') }}" class="btn-auth">Login</a>
+      <a href="{{ url_for('home.register') }}" class="btn-auth">Register</a>
+    </div>
   </div>
 </section>
+s
 
 <main>
     {% block content %}
@@ -58,3 +65,4 @@
 
 </body>
 </html>
+
