@@ -9,6 +9,39 @@ Footer (background): #11461e
 /*Google fonts Roboto (dt. "Schriftart")*/
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+  background-image: url("/static/icons/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* couche sombre légère pour rendre le texte plus lisible */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35); /* ajustable */
+  z-index: -1;
+}
+
+/* si ta navbar est transparente, on la rend un peu plus lisible */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.55); /* fond semi-transparent */
+  backdrop-filter: blur(5px);
+  color: white;
+}
+
+/* au survol, plus élégant que le bleu par défaut */
+.navbar a:hover {
+  color: #7bc47f; /* jaune doux */
+}
+
 /* CSS utilities */
 *{
   box-sizing: border-box;
@@ -130,4 +163,33 @@ p {
     justify-content: center;
     align-items: center;
   }
+}
+/* ---------- LOGIN / REGISTER BUTTONS ---------- */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-auth {
+  background-color: rgb(240, 222, 193);
+  color: #181f19;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-auth:hover {
+  background-color: rgb(240, 222, 193);
+  color: #000;
+}
+a {
+  color: rgb(240, 222, 193); /* couleur du texte normale, beige comme ton thème */
+  text-decoration: none; /* enlève le soulignement */
+}
+
+a:hover {
+  color: #7bc47f; /* vert doux au survol */
+  text-decoration: underline; /* ou none si tu préfères sans soulignement */
 }
