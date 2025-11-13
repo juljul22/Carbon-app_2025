@@ -1,0 +1,44 @@
+/* Home Page Styles */
+
+
+.homepagebackground {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px 20px;
+  text-align: center;
+  color: rgb(240, 222, 193);
+}
+
+.text-overlay {
+  background-color: #181f19;
+    background-color: rgba(24, 31, 25, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 20px auto; 
+    color: rgb(240, 222, 193);
+    text-align: center;
+}
+
+/* Lets investigate-Button */
+.btn_investigate {
+    background-color: #0f2935;
+    color: rgb(240, 222, 193);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover-Effekt */
+.btn_investigate:hover {
+    transform: scale(1.05) translateY(-8px);
+    background-color: rgb(240, 222, 193);
+    color: #0f2935;
+    font-weight: 700;
+}
+
+
+
+

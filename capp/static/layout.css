@@ -1,0 +1,150 @@
+/* Colors */
+/*Navbar (background): #11461e
+Navbar (a hover): rgb(161, 73, 6)
+Navbar (logo): rgb(240, 222, 193)
+Navbar (a menu): rgb(240, 222, 193)
+Footer (background): #11461e
+*/
+
+/*Google fonts Roboto (dt. "Schriftart")*/
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS utilities */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-color: #11461e;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+.container {
+  margin: auto;
+  max-width: 1320px;
+}
+ul { 
+  list-style: none;
+  font-weight: 400;
+}
+a {
+  color: #7cac7d;
+  text-decoration: none;
+}
+h1, h2 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Navbar  */
+
+.section_navbar {
+  background-color:#11461e;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  height: 70px;
+  align-items: center;
+  padding: 0 60px;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+   gap: 8px;
+  font-size: 2rem;    
+  font-weight: 700;
+  color:  rgb(240, 222, 193);
+}
+
+.logo .text-logo-o i {
+  position: relative;
+  top: 2.25px;
+  margin-left: -7px;
+  font-size: 1.8rem;
+}
+
+.navbar nav {
+  flex:1;
+}
+
+.navbar nav ul {
+  display: flex;
+  justify-content: space-evenly;   
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+   }
+
+.navbar nav a {
+  color:  rgb(240, 222, 193);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar nav a:hover {
+  border-bottom: 2px rgb(161, 73, 6) solid;
+}
+
+/* Footer  */
+.section_footer{
+  background-color: #11461e; 
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  align-items: center;
+  padding: 0;
+  color: rgb(240, 222, 193);
+}
+
+.logo_footer {
+  display: flex;
+  align-items: center;
+   gap: 8px;
+  font-size: 2rem;    
+  font-weight: 700;
+  color:  rgb(240, 222, 193);
+}
+
+.logo.text-logo-o i {
+  position: relative;
+  top: 2.25px;
+  margin-left: -7px;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-position: center;
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .navbar nav ul{
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
