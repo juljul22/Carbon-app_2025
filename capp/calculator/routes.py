@@ -16,33 +16,73 @@ efco2={'Bus':{'Diesel':0.10231},
     'Train':{'Diesel':0.09816,'Electric':0},
     'Walk':{'No Fossil Fuel':0}}
 
-
-
 #Carbon app, main page
 @calculator.route('/calculator')
 @login_required
 def calculator_home():
   return render_template('calculator/calculator_home.html', title='calculator')
 
-
-#Carbon app, car
-@calculator.route('/calculator/new_entry_car')
-@login_required
-def new_entry_car():
-    return render_template('calculator/new_entry_car.html', title='Car Calculator')
-
 #Carbon app, plane
-@calculator.route('/calculator/new_entry_plane')
+@calculator.route('/calculator/new_entry_plane', methods=['GET', 'POST'])
 @login_required
 def new_entry_plane():
-    return render_template('calculator/new_entry_plane.html', title='Plane Calculator')
+    form = PlaneForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Plane'
+
+        co2 = float(kms) * efco2[transport][fuel]
+        co2 = float("{:.2f}".format(co2))
+
+        emissions = Transport(
+            kms=kms,
+            transport=transport,
+            fuel=fuel,
+            co2=co2,
+            author=current_user
+        )
+        db.session.add(emissions)
+        db.session.commit()
+
+        return redirect(url_for('calculator.your_data'))
+
+    return render_template(
+        'calculator/new_entry_plane.html',
+        title='Plane Calculator',
+        form=form
+    )
 
 #Carbon app, walk
-@calculator.route('/calculator/new_entry_walk')
+@calculator.route('/calculator/new_entry_walk', methods=['GET', 'POST'])
 @login_required
 def new_entry_walk():
-    return render_template('calculator/new_entry_walk.html', title='Walk Calculator')
+    form = WalkForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Walk'
 
+        co2 = float(kms) * efco2[transport][fuel]
+        co2 = float("{:.2f}".format(co2))
+
+        emissions = Transport(
+            kms=kms,
+            transport=transport,
+            fuel=fuel,
+            co2=co2,
+            author=current_user
+        )
+        db.session.add(emissions)
+        db.session.commit()
+
+        return redirect(url_for('calculator.your_data'))
+
+    return render_template(
+        'calculator/new_entry_walk.html',
+        title='Walk/Bike Calculator',
+        form=form
+    )
 
 #Carbon app, bus
 @calculator.route('/calculator/new_entry_bus', methods=['GET', 'POST'])
@@ -75,17 +115,98 @@ def new_entry_bus():
         form=form
     )
 
+#Carbon app, car
+@calculator.route('/calculator/new_entry_car', methods=['GET', 'POST'])
+@login_required
+def new_entry_car():
+    form = CarForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Car'
+
+        co2 = float(kms) * efco2[transport][fuel]
+        co2 = float("{:.2f}".format(co2))
+
+        emissions = Transport(
+            kms=kms,
+            transport=transport,
+            fuel=fuel,
+            co2=co2,
+            author=current_user
+        )
+        db.session.add(emissions)
+        db.session.commit()
+
+        return redirect(url_for('calculator.your_data'))
+
+    return render_template(
+        'calculator/new_entry_car.html',
+        title='Car Calculator',
+        form=form
+    )
+
 #Carbon app, ferrry
-@calculator.route('/calculator/new_entry_ferry')
+@calculator.route('/calculator/new_entry_ferry', methods=['GET', 'POST'])
 @login_required
 def new_entry_ferry():
-    return render_template('calculator/new_entry_ferry.html', title='Ferry Calculator')
+    form = FerryForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Ferry'
+
+        co2 = float(kms) * efco2[transport][fuel]
+        co2 = float("{:.2f}".format(co2))
+
+        emissions = Transport(
+            kms=kms,
+            transport=transport,
+            fuel=fuel,
+            co2=co2,
+            author=current_user
+        )
+        db.session.add(emissions)
+        db.session.commit()
+
+        return redirect(url_for('calculator.your_data'))
+
+    return render_template(
+        'calculator/new_entry_ferry.html',
+        title='Ferry Calculator',
+        form=form
+    )
 
 #Carbon app, train
-@calculator.route('/calculator/new_entry_train')
+@calculator.route('/calculator/new_entry_train', methods=['GET', 'POST'])
 @login_required
 def new_entry_train():
-    return render_template('calculator/new_entry_train.html', title='Train Calculator')
+    form = TrainForm()
+    if form.validate_on_submit():
+        kms = form.kms.data
+        fuel = form.fuel_type.data
+        transport = 'Train'
+
+        co2 = float(kms) * efco2[transport][fuel]
+        co2 = float("{:.2f}".format(co2))
+
+        emissions = Transport(
+            kms=kms,
+            transport=transport,
+            fuel=fuel,
+            co2=co2,
+            author=current_user
+        )
+        db.session.add(emissions)
+        db.session.commit()
+
+        return redirect(url_for('calculator.your_data'))
+
+    return render_template(
+        'calculator/new_entry_train.html',
+        title='Train Calculator',
+        form=form
+    )
 
 
 #Your data

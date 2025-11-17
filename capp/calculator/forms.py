@@ -15,16 +15,16 @@ class CarForm(FlaskForm):
   submit = SubmitField('Submit')  
 
 class PlaneForm(FlaskForm):
-  kms = FloatField('Kilometers', [InputRequired()])
-  fuel_type = SelectField('Type of Fuel', [InputRequired()]), 
-  choices=[('Economy', 'Economy'), ('Business', 'Business')]
-  submit = SubmitField('Submit')
-  
+    kms = FloatField('Kilometers', [InputRequired()])
+    fuel_type = SelectField('Flight Class', [InputRequired()],
+    choices=[('Economy', 'Economy'), ('Business', 'Business')])
+    submit = SubmitField('Submit')
+
 class FerryForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
   choices=[('Diesel', 'Diesel'), ('CNG', 'CNG'), ('No Fossil Fuel', 'No Fossil Fuel')])
-  submit = SubmitField('Submit')  
+  submit = SubmitField('Submit')
 
 class TrainForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])

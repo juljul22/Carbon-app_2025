@@ -1,74 +1,60 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<!-- Calculator Card-->
 <div class="calculator-grid">
+
+  <!-- Calculator Card -->
   <div class="calculator-card">
     <p><strong>Bus Calculator</strong></p>
-    <p>Please, enter the number of kilometers.
-      </li>
-            <li>
-              Please, select the type of fuel
-            </li>
-          </ol>
-        </p>
+    <p>1. Please, enter the number of kilometers.<br>
+       2. Please, select the type of fuel</p>
+
     <form method="POST" action="">
-              {{ form.csrf_token }}
-              <fieldset class="form-group">
+      {{ form.csrf_token }}
+      <fieldset class="form-group">
 
-                <div class="form-group">
-                    {{ form.kms.label(class="form-control-label") }}
-                    {% if form.kms.errors %}
-                        {{ form.kms(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.kms.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.kms(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
+        <div class="form-group">
+          {{ form.kms.label(class="form-control-label") }}
+          {% if form.kms.errors %}
+            {{ form.kms(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.kms.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.kms(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
 
-                <div class="form-group">
-                    {{ form.fuel_type.label(class="form-control-label") }}
-                    {% if form.fuel_type.errors %}
-                        {{ form.fuel_type(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.fuel_type.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.fuel_type(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
+        <div class="form-group">
+          {{ form.fuel_type.label(class="form-control-label") }}
+          {% if form.fuel_type.errors %}
+            {{ form.fuel_type(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.fuel_type.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.fuel_type(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
 
-              </fieldset>
-              </br>
-              <div class="form-group">
-                {{ form.submit(class="btn_carbon_app_new_entry_main") }}
-              </div>
-          </form>
+      </fieldset>
+
+      <div class="form-group mt-2">
+        {{ form.submit(class="btn_carbon_app_new_entry_main") }}
       </div>
-      
-      <div class="box">
-
-      </div>
-  </div>
-</section> 
-
+    </form>
   </div>
 
- 
-<!-- Card Mtehodology-->
+  <!-- Methodology Card -->
   <div class="calculator-card">
     <p><strong>Methodology</strong></p>
-    <p>
-      Buses carry many people at once which keeps emissions per person low. 
-      A typical diesel bus produces around <strong>30 g CO₂/pkm</strong>
-       </p><strong>Tip from MR. Eco: Choosing public transport is one of the easiest ways to reduce your footprint without changing your routine!</strong> 
-  </p>
+    <p>Buses carry many people at once, which keeps emissions per person low.  
+       A typical diesel bus produces around <strong>30 g CO₂/pkm</strong>.</p>
+    <p><strong>Tip from MR. Eco: Choosing public transport is one of the easiest ways to reduce your footprint without changing your routine!</strong></p>
   </div>
 
 </div>
