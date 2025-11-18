@@ -6,11 +6,11 @@ import os
 
 application = Flask(__name__)
 
-# application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
-application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
-
-application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
-application.config['SQLALCHEMY_BINDS'] ={'transport': 'sqlite:///transport.db'}
+### Code GitHub
+application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
+DBVAR = f"postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
+application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
+application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
 
 db = SQLAlchemy(application)
@@ -27,4 +27,5 @@ from capp.users.routes import users
 application.register_blueprint(home)
 application.register_blueprint(calculator)
 application.register_blueprint(aboutus)
+
 application.register_blueprint(users)
