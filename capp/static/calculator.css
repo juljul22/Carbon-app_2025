@@ -1,15 +1,31 @@
-/* Our Paper-Button */
+/* Paper */
 .btn_paper {
     background-color: #0e76a8;
     color: rgb(240, 222, 193);
     padding: 10px;
     border-radius: 12px;
+    text-align: center;   
+}
+
+/* Hover-Effekt */
+.btn_paper:hover {
+    transform: scale(1.05) translateY(-8px);
+    background-color: rgb(240, 222, 193);
+    color: #0e76a8;
+    font-weight: 700;
+}
+
+/* Button-new-entry */
+.btn_entry {
+    background-color: #0f2935;
+    color: rgb(240, 222, 193);
+    padding: 10px;
+    border-radius: 20px;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-/* TRANSPORT CARDS (pictures with the transport means */
+/* TRANSPORT CARDS (boxes with pictures of the transport means */
 
 /* Transport-Grid*/
 .transport-grid {
@@ -17,8 +33,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    margin-bottom: 40px;
 }
-
 
 /* Transport-Cards*/
 .transport-card {
@@ -50,7 +66,7 @@
   margin-left: 30px;
 }
 
-/* Calculator CARDS (calculator and methodology card */
+/* Calculator CARDS (calculator and methodology card) */
 
 .calculator-grid {
   display: flex;
@@ -71,5 +87,108 @@
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+/*End container buttons section main menu*/
+/*Container main menu */
+.main_menu {
+  display: flex;
+  background: #c5c8d9;
+  }  
+.main_menu .container {
+  display: flex;
+  background: #c5c8d9;
+}
+.main_menu .container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.main_menu .container .box {
+  flex: 1;
+  background: #c5c8d9;
+  border-radius: 2px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+}  
+.main_menu .container  .box:nth-of-type(1) {
+  flex-grow:1;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  text-align:left;
+}  
+.main_menu .container  .box:nth-of-type(2) {
+  flex-grow:6;
+  max-width: 450px;
+  background: #568c63;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+}  
+.main_menu .container  .box:nth-of-type(3) {
+  flex-grow:1;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  text-align:left;
+}
+/*End container main menu*/
+/*Container buttons section main menu */
+.container_buttons_links_main_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.container_buttons_links_main_menu a:hover {
+  color: #568c63;
+}
 
+/*Media Queries*/
 
+@media (max-width:768px) { 
+  .header_carbon_app {
+    flex-direction: column;
+  } 
+  .carbon_app_new_entry_main {
+    flex-direction: column;
+  } 
+  .new_entry .container {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+  .table_main .container {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/*Container two_emissions_graphs */
+.two_emissions_graphs {
+  display: flex;
+  background: #c5c8d9;
+  }  
+.two_emissions_graphs .container {
+  display: flex;
+  background: #c5c8d9;
+}
+.two_emissions_graphs .container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.two_emissions_graphs .container .box {
+  flex: 1;
+  background: #c5c8d9;
+  border-radius: 2px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+}  
+
+/*End container two_emissions_graphs*/

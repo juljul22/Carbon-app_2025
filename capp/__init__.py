@@ -19,6 +19,7 @@ login_manager= LoginManager(application)
 login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 
+
 from capp.home.routes import home
 from capp.calculator.routes import calculator
 from capp.aboutus.routes import aboutus
@@ -27,6 +28,4 @@ from capp.users.routes import users
 application.register_blueprint(home)
 application.register_blueprint(calculator)
 application.register_blueprint(aboutus)
-
 application.register_blueprint(users)
-

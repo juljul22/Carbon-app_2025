@@ -22,8 +22,8 @@ class PlaneForm(FlaskForm):
 
 class FerryForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
-  fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-  choices=[('Diesel', 'Diesel'), ('CNG', 'CNG'), ('No Fossil Fuel', 'No Fossil Fuel')])
+  fuel_type = SelectField('Transport class', [InputRequired()], 
+  choices=[('Passenger with car', 'Passenger with car'), ('Passenger only', 'Passenger only')])
   submit = SubmitField('Submit')
 
 class TrainForm(FlaskForm):

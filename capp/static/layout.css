@@ -1,11 +1,3 @@
-/* Colors */
-/*Navbar (background): #11461e
-Navbar (a hover): rgb(161, 73, 6)
-Navbar (logo): rgb(240, 222, 193)
-Navbar (a menu): rgb(240, 222, 193)
-Footer (background): #11461e
-*/
-
 /*Google fonts Roboto (dt. "Schriftart")*/
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -17,7 +9,7 @@ Footer (background): #11461e
 }
 
 body {
-    background-color: #11461e;
+    background-color: #567241;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -46,7 +38,7 @@ p {
 /* Navbar  */
 
 .section_navbar {
-  background-color:#11461e;
+  background-color:#021057b9;
 }
 
 .navbar {
@@ -99,7 +91,7 @@ p {
 
 /* Footer  */
 .section_footer{
-  background-color: #11461e; 
+  background-color: #021057b9;
 }
 
 .footer {
