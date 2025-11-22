@@ -1,17 +1,17 @@
-/* Home Page Styles */
 
+/* Homepage background picture */
 .homepagebackground {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 150px 20px;
   text-align: center;
-  color: rgb(240, 222, 193);
+
 }
 
+/* Textbox*/
 .text-overlay {
-  background-color: #181f19;
-    background-color: rgba(24, 31, 25, 0.8);
+    background-color: rgba(24, 31, 25, 0.361);
     padding: 30px;
     border-radius: 12px;
     max-width: 900px;
@@ -30,7 +30,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover-Effekt */
+/* Lets investigate-Button: Hover-Effekt */
 .btn_investigate:hover {
     transform: scale(1.05) translateY(-8px);
     background-color: rgb(240, 222, 193);

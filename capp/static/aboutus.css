@@ -1,6 +1,6 @@
-/* Hero Section */
+/* Picture Section */
 
-.hero{
+.picture{
  background-image: url("/static/images/aboutus.jpeg");  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,18 +9,28 @@
   color: rgb(240, 222, 193);
 }
 
-.hero h1 {
+.picture .text-overlay {
+    background-color: rgba(20, 21, 21, 0.553);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 20px auto; 
+    color: rgb(240, 222, 193);
+    text-align: center;  
+}
+
+.picture h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
-.hero p {
+.picture p {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.2rem;
   line-height: 1.8;
   color: rgb(240, 222, 193);
-  text-align: justify;
+  text-align: left;
 }
 
 
@@ -89,7 +99,7 @@
 
 
 @media (max-width: 768px) {
-  .hero {
+  .picture {
     background-position:center;
     font-size: 16px;
   }
