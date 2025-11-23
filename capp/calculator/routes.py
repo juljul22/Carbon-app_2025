@@ -190,7 +190,7 @@ def your_data():
     kms_by_transport = db.session.query(db.func.sum(Transport.kms), Transport.transport).\
         filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user).\
         group_by(Transport.transport).order_by(Transport.transport.asc()).all()
-    kms_transport = [0, 0, 0, 0, 0, 0, 0]
+    kms_transport = [0, 0, 0, 0, 0, 0]
     first_tuple_elements = []
     second_tuple_elements = []
     for a_tuple in kms_by_transport:
@@ -198,22 +198,22 @@ def your_data():
         second_tuple_elements.append(a_tuple[1])
     if 'Bus' in second_tuple_elements:
         index_bus = second_tuple_elements.index('Bus')
-        kms_transport[1] = first_tuple_elements[index_bus]
+        kms_transport[0] = first_tuple_elements[index_bus]
     if 'Car' in second_tuple_elements:
         index_car = second_tuple_elements.index('Car')
-        kms_transport[2] = first_tuple_elements[index_car]
+        kms_transport[1] = first_tuple_elements[index_car]
     if 'Ferry' in second_tuple_elements:
         index_ferry = second_tuple_elements.index('Ferry')
-        kms_transport[3] = first_tuple_elements[index_ferry]
+        kms_transport[2] = first_tuple_elements[index_ferry]
     if 'Plane' in second_tuple_elements:
         index_plane = second_tuple_elements.index('Plane')
-        kms_transport[4] = first_tuple_elements[index_plane]
+        kms_transport[3] = first_tuple_elements[index_plane]
     if 'Train' in second_tuple_elements:
         index_train = second_tuple_elements.index('Train')
-        kms_transport[5] = first_tuple_elements[index_train]
+        kms_transport[4] = first_tuple_elements[index_train]
     if 'Walk' in second_tuple_elements:
         index_walk = second_tuple_elements.index('Walk')
-        kms_transport[6] = first_tuple_elements[index_walk]
+        kms_transport[5] = first_tuple_elements[index_walk]
    
     # Kms by date (individual)
     kms_by_date = db.session.query(db.func.sum(Transport.kms), Transport.date).\
